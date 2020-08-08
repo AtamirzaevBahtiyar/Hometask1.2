@@ -9,11 +9,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println(ageTemperature(20, 27));
-        System.out.println(ageTemperature(30, 15));
-        System.out.println(ageTemperature(40, 30));
+        System.out.println(ageTemperature(generateRandomAge(), 27));
+        System.out.println(ageTemperature(generateRandomAge(), 30));
         System.out.println(ageTemperature(15, -5));
         System.out.println(ageTemperature(17, 0));
+
 
 
     }
@@ -35,8 +35,10 @@ public class Main {
     }
 
     public static int generateRandomAge() {
-        Random x = new Random(1);
+        Random x = new Random();
         int k = x.nextInt(70);
+        System.out.println(k);
+
         return k;
 
     }
